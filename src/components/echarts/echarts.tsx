@@ -69,9 +69,9 @@ const ECharts: ForwardRefRenderFunction<EChartsRef, Props> = ({ option, style, s
     }
   }, [loading, theme]);
 
-  // return (
-  //   <Box ref={chartRef} css={{ ...style }} />
-  // );
+  return (
+    <Box ref={chartRef} css={{ ...style }} />
+  );
 };
 
 export default forwardRef(ECharts);
