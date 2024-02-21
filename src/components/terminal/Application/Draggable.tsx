@@ -59,35 +59,36 @@ export default function Draggable({
   }, [x, y, width, height]);
 
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        scale: 0.1,
-        x: initialPosition.x,
-        y: initialPosition.y,
-      }}
-      animate={{
-        opacity: 1,
-        scale: 1,
-        x: isFullscreen ? 0 : initialPosition.x,
-        y: isFullscreen ? 0 : initialPosition.y,
-      }}
-      transition={{
-        duration: 0.5,
-        ease: [0.43, 0.13, 0.23, 0.96],
-      }}
-      drag={drag}
-      onDragEnd={onDragEnd}
-      dragControls={controls}
-      dragMomentum={false}
-      style={{
-        position: "absolute",
-        zIndex: 25,
-        width: isFullscreen ? "100%" : "fit-content",
-        height: isFullscreen ? "100%" : "fit-content",
-      }}
-    >
-      {children}
-    </motion.div>
+    <div style={{
+      position: "absolute",
+      zIndex: 25,
+      width: isFullscreen ? "100%" : "fit-content",
+      height: isFullscreen ? "100%" : "fit-content",
+    }}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.1,
+          x: initialPosition.x,
+          y: initialPosition.y,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          x: isFullscreen ? 0 : initialPosition.x,
+          y: isFullscreen ? 0 : initialPosition.y,
+        }}
+        transition={{
+          duration: 0.5,
+          ease: [0.43, 0.13, 0.23, 0.96],
+        }}
+        drag={drag}
+        onDragEnd={onDragEnd}
+        dragControls={controls}
+        dragMomentum={false}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 }
