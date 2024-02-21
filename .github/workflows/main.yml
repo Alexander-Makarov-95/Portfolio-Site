@@ -1,8 +1,18 @@
+# .github/workflows/build-and-deploy.yml
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
+      # https://github.com/actions/checkout
       - uses: actions/checkout@v4
 
       # Setup Node.js version 16.6.0
@@ -10,7 +20,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.6.0'
-
+      
       - uses: pnpm/action-setup@v2
         with:
           version: 8.x.x
@@ -21,7 +31,9 @@ jobs:
           path: |
             ~/.pnpm
             ${{ github.workspace }}/.next/cache
+          # Generate a new cache whenever packages or source files change.
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
@@ -33,6 +45,7 @@ jobs:
           touch out/.nojekyll
 
       - name: Deploy
+        # https://github.com/JamesIves/github-pages-deploy-action
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
