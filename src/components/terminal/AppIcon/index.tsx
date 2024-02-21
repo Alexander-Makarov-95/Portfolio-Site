@@ -61,10 +61,8 @@ export default function AppIcon({
           "flex h-fit w-fit flex-col items-center justify-center p-2"
         )}
         style={{
-          backgroundColor: showAppBg
-            ? "rgba(255, 255, 255, 0.1)"
-            : "transparent",
-        }}
+          backgroundColor: showAppBg ? "rgba(255, 255, 255, 0.1)" : "transparent",
+      } as React.CSSProperties}
       >
         <div
           style={{
