@@ -9,6 +9,7 @@ index c055b6650bdc1620c36790ba4f68bc0ea657428a..0e7a30bdc2112c485c185322d61fecc1
 -          app.server.hotReloader.send('reloadPage')
 +          app.server.hotReloader.send({
 +            event: 'serverOnlyChanges',
++            pages: ['/posts/[...markdownPath]']
 +          });
          }
        )
