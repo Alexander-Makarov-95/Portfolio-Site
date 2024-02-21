@@ -50,12 +50,16 @@ const ApplicationProvider = ({ children }: { children: ReactNode }) => {
     if (apps.length <= 1) return
 
     const index = apps.findIndex(({ id }) => id === appOnFocus)
-    const app = apps[index]
+    if (index !== -1) {
+      // Copy the apps array
+      const copyApps = [...apps];
+      // Remove the app from its current position
+      const [app] = copyApps.splice(index, 1);
+      // Push the app back to the end of the array
+      copyApps.push(app);
 
-    const copyApps = apps.toSpliced(index, 1)
-    copyApps.push(app)
-
-    setApps(copyApps)
+      setApps(copyApps);
+    }
   }, [appOnFocus])
 
   const addApp = ({ name, x, y }: AddAppProps) => {

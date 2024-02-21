@@ -5,7 +5,7 @@ import { styled } from 'stitches.config';
 import { useTheme } from '@/contexts/theme-provider/theme-provider';
 // import { ChartType, getChartOptions, initialChartOption } from './health-monitor-helper';
 import useChartData from './use-chart-data';
-// import ECharts, { type EChartsRef } from '@/components/echarts/echarts';
+import ECharts, { type EChartsRef } from '@/components/echarts/echarts';
 // import ActivityIcon from '@/components/icon/activity-icon';
 // import ScatterIcon from '@/components/icon/scatter-icon';
 // import { styles } from '@stitches/react';
@@ -19,60 +19,14 @@ const HealthMonitor: ForwardRefRenderFunction<EChartsRef> = (_, ref) => {
 
   const { resolvedTheme = 'dark' } = useTheme();
 
-  // /** Set chart style according to current theme. */
-  // useEffect(() => {
-  //   updateOption();
-  // }, [resolvedTheme]);
-
-  // /** Update chart data upon chartData state change. */
-  // useEffect(() => {
-  //   if (chartData?.length) {
-  //     /** ECharts merges changes so only set chart data in object. */
-  //     const newOption: EChartsOption = {
-  //       series: [
-  //         {
-  //           data: chartData,
-  //         },
-  //       ]
-  //     };
-
-  //     setOption(newOption);
-  //   }
-  // }, [chartData]);
-
-  // /** Change chart type to line or scatter.  */
-  // const setChartType = (type: ChartType) => {
-  //   localStorage.setItem('chart-type', type);
-
-  //   updateOption();
-  // };
-
-  // const updateOption = () => {
-  //   const newOption: EChartsOption = getChartOptions(resolvedTheme);
-
-  //   currentChartType.current = newOption.series?.[0].type;
-
-  //   setOption(newOption);
-  // };
-
   return (
     <Wrapper>
       <WidgetInfoTextWrapper>
         <WidgetInfoTextRow>
           <WidgetInfoTextGroup >
-            <T size={5} color="white" padding="tiny">ID: EVENT HORIZON PATHFINDER </T>
-            <T size={5} color="white" padding="tiny">DATA SET: ECHO VAULT DOSSIER </T>
+            <T size={5} padding="tiny">ID: EVENT HORIZON PATHFINDER </T>
+            <T size={5} padding="tiny">DATA SET: ECHO VAULT DOSSIER </T>
           </WidgetInfoTextGroup>
-          {/* <WidgetInfoTextGroup align="right"> */}
-            {/* <ButtonWrapper>
-              <ChartTypeButton variant={currentChartType.current === ChartType.scatter ? 'active' : undefined} onClick={() => setChartType(ChartType.scatter)}>
-                <ScatterIcon color='cyan1' width={24} height={18} />
-              </ChartTypeButton>
-              <ChartTypeButton variant={currentChartType.current === ChartType.line ? 'active' : undefined} onClick={() => setChartType(ChartType.line)}>
-                <ActivityIcon color='cyan1' width={24} height={24} />
-              </ChartTypeButton>
-            </ButtonWrapper> */}
-          {/* </WidgetInfoTextGroup> */}
         </WidgetInfoTextRow>
         <WidgetInfoTextRow align="bottom">
           <WidgetInfoTextGroup>

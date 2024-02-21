@@ -8,13 +8,13 @@ export interface Props {
   height?: number
 }
 
-const ApiRestIcon = ({ color = 'primary', css, width, height }: Props) => {
+const ApiRestIcon = ({ css, width, height }: Props) => {
   return (
     <Box
       as="svg"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
-      css={{ fill: `$${color}`, width, height, ...css }}
+      css={{ width, height, ...css }}
     >
       <title>API REST logo</title>
       <Box

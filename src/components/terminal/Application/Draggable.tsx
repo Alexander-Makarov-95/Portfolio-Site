@@ -35,11 +35,11 @@ export default function Draggable({
   const width = 300
   const height = 200
 
-  useEffect(() => {
-    if (drag && mouse && !isFullscreen) {
-      controls.start(mouse);
-    }
-  }, [drag]);
+  // useEffect(() => {
+  //   if (drag && mouse && !isFullscreen) {
+  //     controls.start(mouse);
+  //   }
+  // }, [drag]);
 
   const onDragEnd = () => {
     setDrag(false);

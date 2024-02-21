@@ -42,7 +42,7 @@ export type UnitCodeRow = UnitCode[];
 export type UnitCodeData = UnitCodeRow[];
 
 export interface Alarm {
-  id: number
+  id: string
   label: string
   dueDate: string
   description: string

@@ -8,7 +8,7 @@ export interface Props {
   height?: number
 }
 
-const SqlIcon = ({ color = 'black', css, width, height }: Props) => {
+const SqlIcon = ({ css, width, height }: Props) => {
   return (
     <Box
       as="svg"
@@ -20,7 +20,6 @@ const SqlIcon = ({ color = 'black', css, width, height }: Props) => {
       <defs>
         <style type="text/css">
           {`#black {
-            fill: ${color};
           }
           @media (prefers-color-scheme: dark) {
             #black {

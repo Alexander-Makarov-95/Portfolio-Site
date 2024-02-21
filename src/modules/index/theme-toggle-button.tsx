@@ -1,24 +1,31 @@
+import React, { useEffect, useState, useRef } from 'react';
 import { SlicedButton } from '@/components/stitches/sliced-button';
-import { useEffect, useState, useRef } from 'react';
 
 const MusicToggleButton = ({ src }) => {
   const [isMuted, setIsMuted] = useState(true);
   const [isUserInteracted, setIsUserInteracted] = useState(false);
-  const audioRef = useRef(null);
+  // Explicitly type the ref as HTMLAudioElement
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const toggleMute = () => {
-    // Play the music on first interaction if not already playing
-    if (!isUserInteracted) {
-      audioRef.current.play();
+    // Ensure audioRef.current is not null and call play()
+    if (!isUserInteracted && audioRef.current) {
+      audioRef.current.play().catch(error => console.error('Error playing audio:', error));
       setIsUserInteracted(true);
     }
 
     setIsMuted(!isMuted);
   };
 
+  useEffect(() => {
+    if(audioRef.current) {
+      audioRef.current.muted = isMuted;
+    }
+  }, [isMuted]);
+
   return (
     <>
-      <audio ref={audioRef} src={src} muted={isMuted} autoPlay loop />
+      <audio ref={audioRef} src={src} autoPlay loop />
       <SlicedButton
         onClick={toggleMute}
         variant={{ '@navBarCollapse': 'standard' }}

@@ -26,7 +26,6 @@ function WelcomeCard({ onEnterMainframe }) {
         backgroundImage: `url(${welcomeFrame})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backdropFilter: 'blur(0px)',
       }}
     >
       {/* Conditionally render the inner content based on isOpen */}
