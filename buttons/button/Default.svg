@@ -1,0 +1,42 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 263" width="512" height="263">
+    <defs>
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur>
+            <feOffset dx="4" dy="4" result="offsetblur"></feOffset>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.5"/>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <style>
+        .s0 { fill: #99faff; filter: url(#shadow); } 
+    </style>
+    <g id="Group">
+        <g id="Group">
+            <path id="Compound Path" fill-rule="evenodd" class="s0" d="m500.7 244h-493.1v-231.3h471.2l21.9 21.9zm-490.8-2.3h488.5v-206l-20.6-20.6h-467.9z"/>
+        </g>
+        <path id="Path" class="s0" d="m7.6 12.2l11.6-11.7h88.8l12.6 12.6z"/>
+        <path id="Path" class="s0" d="m499.6 221.8h-490.9v21h490.9z"/>
+        <path id="Path" class="s0" d="m500.7 155.5l11.1-10.9v-98.6l-11.7-11.7z"/>
+        <g id="Group">
+            <g id="Group">
+                <path id="Path" class="s0" d="m509.3 254.5h-412.2v-2.3h409.9v-85.2h2.3z"/>
+            </g>
+        </g>
+        <path id="Path" class="s0" d="m511.5 167c0-1.8-1.5-3.3-3.4-3.3-1.8 0-3.3 1.5-3.3 3.3 0 1.9 1.5 3.4 3.3 3.4 1.9 0 3.4-1.5 3.4-3.4z"/>
+        <path id="Path" class="s0" d="m100.5 252.8c0-1.8-1.5-3.3-3.4-3.3-1.8 0-3.3 1.5-3.3 3.3 0 1.9 1.5 3.4 3.3 3.4 1.9 0 3.4-1.5 3.4-3.4z"/>
+        <path id="Path" class="s0" d="m95.4 239.9c0 0-21.3 22.9-22.1 22.1-0.8-0.8-65.7 0-65.7 0v-23.7z"/>
+        <g id="Group">
+            <path id="Path" class="s0" d="m238.1 50.6h-229.4v-1.1h228.9l35.3-35.2 0.8 0.7z"/>
+        </g>
+        <path id="Path" class="s0" d="m238.9 50.1l-5.9 5.9h-225l1.9-5.9z"/>
+        <path id="Path" class="s0" d="m269.2 18.7h213.1c0 0-1.8-6.4-3.5-6-1.7 0.4-203.4 0.4-203.6 0.4-0.2 0.1-6 5.6-6 5.6z"/>
+        <path id="Path" class="s0" d="m290.5 15l9.1-9.1h105.8l9.4 9.4z"/>
+        <path id="Path" class="s0" d="m20.1 14.6v38.4h-11.4v-38z"/>
+        <path id="Path" class="s0" d="m8.7 184.9l-8.2 8.2v60.3l7.8 7.8z"/>
+    </g>
+</svg>

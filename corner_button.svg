@@ -1,0 +1,20 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 161" width="150" height="161">
+	<title>&lt;Group&gt;</title>
+	<style>
+		.s0 { fill: #99faff } 
+	</style>
+	<g id="&lt;Group&gt;">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Compound Path&gt;" fill-rule="evenodd" class="s0" d="m142.7 149.3h-142.1v-142h128.6l13.5 13.5zm-140.6-1.5h139.1v-126.5l-12.6-12.6h-126.5z"/>
+		</g>
+		<path id="&lt;Path&gt;" class="s0" d="m0.6 7.3l7.2-7.2h54.5l7.7 7.7z"/>
+		<path id="&lt;Path&gt;" class="s0" d="m141.9 135.7h-140.5v12.9h140.5z"/>
+		<path id="&lt;Path&gt;" class="s0" d="m142.6 95.3l6.8-6.7v-60.6l-7.1-7.1z"/>
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Path&gt;" class="s0" d="m147.9 155.8h-92.3v-1.5h90.9v-52.2h1.4z"/>
+		</g>
+		<path id="&lt;Path&gt;" class="s0" d="m149.3 102.1c0-1.2-1-2.1-2.1-2.1-1.1 0-2.1 0.9-2.1 2.1 0 1.1 1 2 2.1 2 1.1 0 2.1-0.9 2.1-2z"/>
+		<path id="&lt;Path&gt;" class="s0" d="m57.7 155c0-1.1-0.9-2-2.1-2-1.1 0-2 0.9-2 2 0 1.2 0.9 2.1 2 2.1 1.2 0 2.1-0.9 2.1-2.1z"/>
+		<path id="&lt;Path&gt;" class="s0" d="m54.6 146.8c0 0-13.1 14.1-13.6 13.6-0.5-0.5-40.4 0-40.4 0v-14.6z"/>
+	</g>
+</svg>
