@@ -1,0 +1,10 @@
+{
+  "aws_project_region": "ap-southeast-2",
+  "aws_cloud_logic_custom": [
+    {
+      "name": "BlackHoleContactForm",
+      "endpoint": "https://8y45ts0n37.execute-api.ap-southeast-2.amazonaws.com/dev",
+      "region": "ap-southeast-2"
+    }
+  ]
+}
