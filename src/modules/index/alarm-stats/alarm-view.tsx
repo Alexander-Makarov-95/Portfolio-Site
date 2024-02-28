@@ -24,11 +24,12 @@ const AlarmView = ({ alarm }: Props) => {
                 <WarningIcon color='red1' width={22} height={22} />
               </IconContainer>
               <AlarmTitleWrapper>
+
+              <T2 color="gray12" size={{ '@initial': '6', '@bp570': '4' }} weight="4" >{alarm.label}</T2>
+
+                <Box css={{ h: 5 }} />
+
                 <T2 color="yellow1" size="4" weight="4" >ID: {alarm.id}</T2>
-
-                <Box css={{ h: 10 }} />
-
-                <T2 color="gray12" size={{ '@initial': '6', '@bp570': '4' }} weight="4" >{alarm.label}</T2>
               </AlarmTitleWrapper>
             </AlarmHeaderWrapper>
 
@@ -65,7 +66,7 @@ const AlarmView = ({ alarm }: Props) => {
 };
 
 const Wrapper = styled('div', {
-  height: '450px',
+  height: '600px',
   background: '$cyan14',
 
   //note for future will be userful

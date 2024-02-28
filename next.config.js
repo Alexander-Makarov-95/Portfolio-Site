@@ -25,6 +25,10 @@ const nextConfig = {
     path: 'https://sws.imgix.net/',
   },
 
+    experimental: {
+      serverActions: true,
+    },
+
   // Extend webpack configuration
   webpack: (config, { isServer }) => {
     // Add a rule for .glsl files using raw-loader
