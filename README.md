@@ -42,6 +42,6 @@
 ## Sections 📚
 ✔️ Analysis (Homepage)\
 ✔️ About\
-✔️ Technical Experise\
+✔️ Technical Expertise\
 ✔️ Projects\
 ✔️ Contact Info
