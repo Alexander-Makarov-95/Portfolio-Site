@@ -10,9 +10,8 @@ import { App } from "../types/ApplicationType"
 
 const APPLICATIONS = {
   steam_sync: lazy(() => import("../Apps/SteamSync")),
-  cat_tracker: lazy(() => import("../Apps/Calculator")),
-  wedding_photos: lazy(() => import("../Apps/Navigator")),
-  portfolio_website: lazy(() => import("../Apps/Terminal")),
+  blissful_echoes: lazy(() => import("../Apps/BlissfulEchoes")),
+  personal_website: lazy(() => import("../Apps/PortfolioWebsite")),
 }
 
 export type ApplicationName = keyof typeof APPLICATIONS

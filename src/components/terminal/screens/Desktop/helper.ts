@@ -11,14 +11,14 @@ const AppsOnDesktop: {
     icon: "icons//applications/steam_sync.svg",
   },
   {
-    title: "Personal",
-    id: "portfolio_website",
+    title: "Portfolio",
+    id: "personal_website",
     icon: "/icons/applications/planet.svg",
   },
   {
-    title: "Wedding Photos",
-    id: "wedding_photos",
-    icon: "/icons/applications/wedding_viewer.svg",
+    title: "Blissful Echoes",
+    id: "blissful_echoes",
+    icon: "/icons/applications/blissful_echoes.svg",
   },
   {
     title: "Cat Tracker",
