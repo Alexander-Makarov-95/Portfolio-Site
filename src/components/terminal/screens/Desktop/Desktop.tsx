@@ -53,12 +53,6 @@ const Desktop = () => {
                   title={app.title}
                 />
               ))}
-              <TopBar
-                style={{
-                  backgroundImage: `url(${topHeaderImage})`,
-                  transform: "rotate(180deg)",
-                }}
-              ></TopBar>
             </DottedBackground>
           </DesktopBox>
         )}
