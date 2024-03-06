@@ -1,9 +1,6 @@
-import CornerDotsBox from '@/components/ui/corner-dots-box';
 import { Box, WidgetWrapper, T } from '@/components/stitches';
 import { styled } from 'stitches.config';
 import LoadThresMetrics from './load-thres-metrics';
-import TableMetrics from './table-metrics';
-import TableMetrics2 from './table-metrics-2';
 import WidgetHeader from '@/components/widget/widget-header';
 import ProjectStack from '@/modules/about/project-stack';
 
@@ -23,12 +20,7 @@ const RuntimeMetricsContainer = () => {
         <Box css={{ h: 10 }} />
 
         <LoadThresMetrics />
-
-        {/* <Box css={{ h: 30 }} /> */}
-
          <TableDataRow>
-          {/* <TableMetrics />
-          <TableMetrics2 /> */}
           <ProjectStack />
         </TableDataRow> 
       </WidgetWrapper>

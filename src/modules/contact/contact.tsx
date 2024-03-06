@@ -49,7 +49,7 @@ const Background = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   // backdropFilter: 'blur(2.5px)',
-  border: '0.1px solid rgba(0, 255, 255, 0.025)'
+  // border: '0.1px solid rgba(0, 255, 255, 0.025)'
 });
 
 export default Contact;

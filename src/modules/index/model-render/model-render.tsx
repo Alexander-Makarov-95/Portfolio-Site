@@ -122,7 +122,7 @@ const Wrapper = styled('div', {
   position: 'relative',
   background: '$cyan14',
   // backdropFilter: 'blur(2.5px)',
-  border: '0.1px solid rgba(0, 255, 255, 0.025)'
+  // border: '0.1px solid rgba(0, 255, 255, 0.025)'
 });
 
 const ImageWrapper = styled('div', {

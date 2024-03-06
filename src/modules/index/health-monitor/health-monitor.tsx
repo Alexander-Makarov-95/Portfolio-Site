@@ -92,7 +92,7 @@ const Wrapper = styled('div', {
   position: 'relative',
   background: '$cyan14',
   height: '75vh',
-  border: '0.1px solid rgba(0, 255, 255, 0.025)',
+  // border: '0.1px solid rgba(0, 255, 255, 0.025)',
   // Media query for bp4
   '@media (max-width: 510px)': {
     textShadow: '0 0 4px BLACK',

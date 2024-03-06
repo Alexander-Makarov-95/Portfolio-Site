@@ -43,13 +43,8 @@ const NavigationBar = ({ children }: Props) => {
             </NavbarLinksContainer>
           </NavigationBarBox>
         </CornerDotsBox>
-
         <Box css={{ h: 10, '@navBarCollapse': {} }} />
-
         <Breadcrumbs rootLabel="/" labelsToUppercase />
-
-        <CornerDotsBox onlyRight />
-
         <Box css={{ h: 30 }} />
 
         <main>

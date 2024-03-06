@@ -306,8 +306,22 @@ function update() {
 
   // window size
   renderer.setPixelRatio(window.devicePixelRatio * performanceResolution)
-  renderer.setSize(window.innerWidth, window.innerHeight)
-  composer.setSize(window.innerWidth * performanceResolution, window.innerHeight * performanceResolution)
+  // renderer.setSize(window.innerWidth, window.innerHeight)
+  // composer.setSize(window.innerWidth * performanceResolution, window.innerHeight * performanceResolution)
+  // renderer.setSize(100, 100)
+  // composer.setSize(100, 100)
+  const setSize = () => {
+    // renderer.width = window.innerWidth;
+    // renderer.height = window.innerHeight;
+
+  const width = window.innerWidth * performanceResolution;
+  const height = window.innerHeight * performanceResolution;
+
+  renderer.setSize(width, height);
+  composer.setSize(width, height);
+
+  }
+  window.onresize = setSize;
 
   // update renderer
   observer.update(delta)

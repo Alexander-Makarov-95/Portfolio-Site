@@ -112,8 +112,8 @@ const ProjectStack = () => {
             </Chip>
           </StackContainer>
         </Background>
+        <CornerDotsBox/>
         <Box css={{ height: 20 }} />
-      <CornerDotsBox/>
     </Wrapper>
   );
 };

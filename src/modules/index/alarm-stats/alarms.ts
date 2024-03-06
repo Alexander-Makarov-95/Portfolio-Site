@@ -14,7 +14,7 @@ export const projectArchiveCodex: Alarm = {
 };
 
 export const warpMailProtocol: Alarm = {
-  id: 'alexander.makarov62@gmail.com',
+  id: 'alexander.makarov62',
   dueDate: '[IMPERATIVE CONVERGENCE]',
   label: 'WARP_MAIL_PROTOCOL',
   description: `Groundbreaking technology in the field of digital communication, employing quantum entanglement and advanced encryption methods to deliver messages instantaneously across vast distances.`,

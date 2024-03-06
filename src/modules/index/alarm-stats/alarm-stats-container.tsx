@@ -32,7 +32,6 @@ const AlarmStatsContainer = () => {
   return (
     <>
       <WidgetWrapper>
-        <CornerDotsBox />
         <WidgetHeader>
           <WidgetHeader.Left>
             <T color="cyan1" weight={2}>PERSONAL </T>
