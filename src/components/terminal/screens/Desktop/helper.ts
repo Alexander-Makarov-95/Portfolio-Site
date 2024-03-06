@@ -20,11 +20,6 @@ const AppsOnDesktop: {
     id: "blissful_echoes",
     icon: "/icons/applications/blissful_echoes.svg",
   },
-  {
-    title: "Cat Tracker",
-    id: "cat_tracker",
-    icon: "/icons/applications/cat_tracker.svg",
-  }
 ]
 
 export { AppsOnDesktop }
