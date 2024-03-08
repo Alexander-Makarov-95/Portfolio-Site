@@ -1,54 +1,53 @@
-import { useEffect, useState } from "react"
-import { useApps } from "../../terminal/hooks/useApp"
-;
+import { useEffect, useState } from "react";
+import { useApps } from "../../terminal/hooks/useApp";
 
-const loadingChar = ["|", "/", "—", "\\"]
+const loadingChar = ["|", "/", "—", "\\"];
 
 export default function Loading() {
-  const [loadingCount, setLoadingCount] = useState(0)
-
-  const { clearApps } = useApps()
+  const [loadingCount, setLoadingCount] = useState(0);
+  const { clearApps } = useApps();
 
   useEffect(() => {
-    clearApps()
+    clearApps();
 
     const interval = setInterval(() => {
       setLoadingCount((prev) => {
-        if (prev === 3) return 0
-        return prev + 1
-      })
-    }, 300)
+        if (prev === 3) return 0;
+        return prev + 1;
+      });
+    }, 300);
 
     return () => {
-      clearInterval(interval)
-    }
-  }, [])
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        height: '292px',
-        width: '502px',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        backgroundColor: 'rgba(9, 9, 11, 0.6)', // Adding opacity with rgba
-        color: 'white',
-        textAlign: 'center',
-        margin: "auto", // Center the box
-        top: 0,
-        bottom: 8,
-        left: 0,
-        right: 6,
-        overflow: 'hidden'
-      }}
-    >
+    <div>
+        <style>
+        {`
+          @media (max-width: 428px) {
+            .text-2xl {
+              font-size: 1.2rem; /* Adjust font size for smaller devices */
+              line-height: 1.2; /* Adjust line height to make text closer */
+              
+            }
+            .text-1xl {
+              font-size: 0.8rem; /* Adjust font size for smaller devices */
+              line-height: 1.2; /* Adjust line height to make text closer */
+              
+            }
+            .loading-char {
+              padding: 10px; /* Adjust the padding as needed */
+            }
+          }
+        `}
+      </style>
       <p className="text-2xl">
         SingularityOS <br />
         Beta Release
       </p>
-      <span className="text-1xl">{loadingChar[loadingCount]}</span>
+      <span className="loading-char">{loadingChar[loadingCount]}</span>
       <div>
         <p className="text-1xl">
           Copyright (c) Makarov Corporation, 1995.
@@ -57,6 +56,5 @@ export default function Loading() {
         </p>
       </div>
     </div>
-  )
-  
+  );
 }

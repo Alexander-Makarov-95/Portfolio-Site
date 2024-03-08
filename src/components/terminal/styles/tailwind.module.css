@@ -105,4 +105,8 @@
   background-image: url("/buttons/button/Hover.svg");
 }
 
-
+@media (max-width: 640px) { 
+   .button {
+    padding: 15px 16px; 
+  } 
+}

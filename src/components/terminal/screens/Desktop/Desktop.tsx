@@ -65,11 +65,15 @@ const WelcomeCardContainer = styled("div", {
   position: "relative",
   height: "400px",
   width: "600px",
-  // overflow: "hidden",
-  display: "flex", // Make it a flex container
-  justifyContent: "center", // Center children horizontally
+  display: "flex",
+  justifyContent: "center",
   alignItems: "center",
+  '@media (max-width: 428px)': { 
+    width: '100%', 
+    height: '200px', 
+  },
 });
+
 
 const DesktopBox = styled("main", {
   position: "absolute", // Position it absolutely to control its placement precisely
@@ -86,6 +90,14 @@ const DesktopBox = styled("main", {
   left: 0,
   right: 6,
   overflow: "hidden",
+  '@media (max-width: 428px)': { 
+    width: '85%', 
+    height: '84%', 
+    left: 3,
+    bottom: 6,
+    backgroundImage: 'none'
+  },
+  
 });
 
 const DottedBackground = styled("div", {
@@ -103,18 +115,41 @@ const TopBar = styled("div", {
   backgroundSize: "425px 40px",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
+  '@media (max-width: 428px)': { 
+    backgroundSize: "285px",
+  },
 });
 
 const LoadingWrapper = styled("div", {
-  position: "absolute",
-  height: "293px", // Ensure this matches DesktopBox height
-  width: "500px", // Ensure this matches DesktopBox width
-  top: "49%", // Center vertically
-  left: "49.5%", // Center horizontally
-  transform: "translate(-50%, -50%)", // Adjust based on the size to center properly
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  // position: "absolute",
+  // height: "293px", // Ensure this matches DesktopBox height
+  // width: "500px", // Ensure this matches DesktopBox width
+  // top: "49%", // Center vertically
+  // left: "49.5%", // Center horizontally
+  // transform: "translate(-50%, -50%)", // Adjust based on the size to center properly
+  // display: "flex",
+  // justifyContent: "center",
+  // alignItems: "center"
+  display: 'flex',
+  height: '292px',
+  width: '502px',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'space-evenly',
+  backgroundColor: 'rgba(9, 9, 11, 0.6)',
+  color: 'white',
+  textAlign: 'center',
+  margin: "auto",
+  left: "7.7%",
+  top: 49,
+  overflow: 'hidden',
+  position: 'absolute',
+  '@media (max-width: 428px)': { 
+    width: '84%', 
+    height: '84%',
+    top: 15
+  },
+
 });
 
 export default Desktop;

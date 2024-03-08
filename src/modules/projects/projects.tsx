@@ -36,7 +36,7 @@ const Projects = () => {
 
 const Wrapper = styled("div", {
   "@media (max-width: 510px)": {
-    textShadow: "0 0 4px BLACK",
+    // textShadow: "0 0 4px BLACK",
     // Add styles bp4 breakpoint here
     // For example, changing the height
     height: "calc(100vh - 375px)",
