@@ -82,7 +82,7 @@ const WelcomeCardContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  '@media (max-width: 428px)': { 
+  '@media (max-width: 600px)': { 
     width: '100%', 
     height: '200px',
   },
@@ -104,7 +104,7 @@ const DesktopBox = styled("main", {
   left: 0,
   right: 6,
   overflow: "hidden",
-  '@media (max-width: 428px)': { 
+  '@media (max-width: 600px)': { 
     width: '85%', 
     height: '84%', 
     left: 3,
@@ -129,7 +129,7 @@ const TopBar = styled("div", {
   backgroundSize: "425px 40px",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  '@media (max-width: 428px)': { 
+  '@media (max-width: 600px)': { 
     backgroundSize: "250px",
   },
 });
@@ -158,7 +158,7 @@ const LoadingWrapper = styled("div", {
   top: 49,
   overflow: 'hidden',
   position: 'absolute',
-  '@media (max-width: 428px)': { 
+  '@media (max-width: 600px)': { 
     width: '84%', 
     height: '84%',
     top: 15

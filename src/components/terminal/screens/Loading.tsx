@@ -26,7 +26,7 @@ export default function Loading() {
     <div>
         <style>
         {`
-          @media (max-width: 428px) {
+          @media (max-width: 600px) {
             .text-2xl {
               font-size: 1.2rem; /* Adjust font size for smaller devices */
               line-height: 1.2; /* Adjust line height to make text closer */

@@ -52,7 +52,7 @@ export default function AppIcon({
     <>
       <style>
         {`
-          @media only screen and (max-width: 428px) {
+          @media only screen and (max-width: 600px) {
             .app-icon-title {
               font-size: ${width * 0.2}px !important; /* Adjust the font size for iPhone 12 Pro Max */
             }
