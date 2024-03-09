@@ -50,37 +50,45 @@ export default function AppIcon({
 
   return (
     <>
+      <style>
+        {`
+          @media only screen and (max-width: 428px) {
+            .app-icon-title {
+              font-size: ${width * 0.2}px !important; /* Adjust the font size for iPhone 12 Pro Max */
+            }
+            .app-icon {
+              width: ${width * 0.9}px !important;
+              height: ${width * 0.8}px !important;
+              
+            }
+          }
+        `}
+      </style>
       <motion.div
+        className={clsx("flex h-fit w-fit flex-col items-center justify-center p-2")}
         drag={isDraggable}
         initial={defaultPosition}
         dragControls={controls}
         dragMomentum={false}
         ref={ref}
         onClickCapture={onClickContent}
-        className={clsx(
-          "flex h-fit w-fit flex-col items-center justify-center p-2"
-        )}
-        style={{
-          backgroundColor: showAppBg ? "rgba(255, 255, 255, 0.1)" : "transparent",
-      } as React.CSSProperties}
+        style={{ backgroundColor: showAppBg ? "rgba(255, 255, 255, 0.1)" : "transparent" }}
       >
         <div
+          className={clsx("bg-contain bg-center bg-no-repeat app-icon")}
           style={{
             width: width * 0.8,
             height: width * 0.8,
             backgroundImage: `url(${icon})`,
           }}
-          className={clsx(`bg-contain bg-center bg-no-repeat`)}
         />
         <strong
+          className="break-words text-center app-icon-title"
           style={{
             width: width * 1.2,
             fontSize: `${width * 0.27}px`,
-            color: showAppBg
-              ? "rgba(255, 255, 255, 0.7)"
-              : "rgba(0, 0, 0, 0.7)", // Directly setting text color using RGBA values
+            color: showAppBg ? "rgba(255, 255, 255, 0.7)" : "rgba(0, 0, 0, 0.7)",
           }}
-          className="break-words text-center"
         >
           {title}
         </strong>

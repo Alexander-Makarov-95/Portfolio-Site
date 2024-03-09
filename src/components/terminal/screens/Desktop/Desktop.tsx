@@ -1,5 +1,5 @@
 import { styled } from "@stitches/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useApps } from "../../hooks/useApp";
 import AppIcon from "../../AppIcon";
 import Application from "../../Application";
@@ -12,6 +12,19 @@ const Desktop = () => {
   const [isDesktopVisible, setIsDesktopVisible] = useState(false); // State to control visibility
   const topHeaderImage = "/top_bar.svg";
   const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    // Update isMobile based on the client-side window width
+    setIsMobile(window.innerWidth < 768); // Change 768 to your mobile breakpoint
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Change 768 to your mobile breakpoint
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleEnterMainframe = () => {
     // Immediately trigger loading
@@ -48,7 +61,8 @@ const Desktop = () => {
                   key={app.id}
                   isDraggable
                   onDoubleClick={() => addApp({ name: app.id })}
-                  defaultPosition={{ x: 20, y: 10 }}
+                  // Check if isMobile is not null before determining the position
+                  defaultPosition={isMobile !== null ? (isMobile ? app.mobileDefaultPosition : app.defaultPosition) : app.defaultPosition}
                   icon={app.icon}
                   title={app.title}
                 />

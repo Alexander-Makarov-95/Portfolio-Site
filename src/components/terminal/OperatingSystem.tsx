@@ -1,4 +1,3 @@
-// import "../terminal/styles/globals.scss"
 import styles from "../terminal/styles/tailwind.module.css";
 import ApplicationProvider from "./contexts/ApplicationContext";
 import Desktop from "./screens/Desktop/Desktop";
