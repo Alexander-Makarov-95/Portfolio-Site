@@ -72,7 +72,7 @@ export default function AppIcon({
         dragMomentum={false}
         ref={ref}
         onClickCapture={onClickContent}
-        style={{ backgroundColor: showAppBg ? "rgba(255, 255, 255, 0.1)" : "transparent" }}
+        style={{ backgroundColor: showAppBg ? "rgba(255, 255, 255, 0.1)" : "transparent" }as React.CSSProperties}
       >
         <div
           className={clsx("bg-contain bg-center bg-no-repeat app-icon")}
