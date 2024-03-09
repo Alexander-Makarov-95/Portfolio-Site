@@ -27,10 +27,10 @@ function WelcomeCard({ onEnterMainframe }) {
       }}
     >
       {isOpen && (
-      <div className="flex h-full w-full flex-col items-center justify-center text-center px-2">
+        <div className="flex h-full w-full flex-col items-center justify-center text-center px-2 sm:pl-4">
         {/* Base styles for mobile and overridden styles for larger screens */}
         <h1 className="text-[4vw] md:text-xl lg:text-2xl leading-tight md:leading-normal">//SingularityOS//</h1>
-        <p className="text-[3vw] my-1 md:text-base lg:text-lg md:my-2 leading-tight md:leading-normal">
+        <p className="text-[3vw] my-1 md:text-base lg:text-lg md:my-2 leading-tight md:leading-normal max-w-xs sm:max-w-none">
           Welcome to the Pathfinder's onboard operating system.
         </p>
         <p className="text-[3vw] my-1 md:text-base lg:text-lg md:my-2 leading-tight md:leading-normal">
@@ -38,11 +38,11 @@ function WelcomeCard({ onEnterMainframe }) {
         </p>
         <button className={clsx(styles.button, "text-sm sm:text-base md:text-lg")} onClick={handleClose}>
             Enter mainframe
-          </button>
+        </button>
       </div>
-    )}
-  </div>
-);
+      )}
+    </div>
+  );
 }
 
 export default WelcomeCard;

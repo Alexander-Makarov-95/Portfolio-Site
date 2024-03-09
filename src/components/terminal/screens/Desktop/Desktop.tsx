@@ -84,7 +84,7 @@ const WelcomeCardContainer = styled("div", {
   alignItems: "center",
   '@media (max-width: 428px)': { 
     width: '100%', 
-    height: '200px', 
+    height: '200px',
   },
 });
 
