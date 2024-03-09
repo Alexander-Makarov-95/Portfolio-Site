@@ -130,7 +130,7 @@ const TopBar = styled("div", {
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   '@media (max-width: 428px)': { 
-    backgroundSize: "285px",
+    backgroundSize: "250px",
   },
 });
 
