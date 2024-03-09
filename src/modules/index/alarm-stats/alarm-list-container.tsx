@@ -39,7 +39,7 @@ const CommunicationList = styled('div', {
   flexDirection: 'column',
   gap: '30px',
   '@media (max-width: 510px)': {
-    width: '375px'
+    // width: '375px'
   }
 });
 
