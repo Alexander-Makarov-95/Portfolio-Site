@@ -6,11 +6,25 @@ import { WindowProvider } from "../contexts/WindowContext";
 import { useWindowContext } from "./helper";
 import Draggable from "./Draggable";
 
-function Application({ Node, ...props }: IApplicationProps) {
+
+function Application({ Node, width, height, ...props }: IApplicationProps & { width?: string, height?: string }) {
   const [drag, setDrag] = useState(false);
   const [mouse, setMouse] = useState<MouseEvent>();
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+      setWindowHeight(window.innerHeight);
+    }
+  
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const { removeApp, setAppOnFocus } = useApps();
   const { setIsResizable, initialSize, setInitialSize } = useWindowContext();
@@ -28,38 +42,33 @@ function Application({ Node, ...props }: IApplicationProps) {
     }, 300);
   };
 
-  function handleFullscreen() {
-    setIsFullscreen((prev) => !prev);
-  }
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 500);
   }, []);
 
+console.log(windowHeight, windowWidth)
+
   return (
     <Draggable
-      drag={!isFullscreen && drag}
+      drag={drag}
       mouse={mouse}
       setDrag={setDrag}
       x={props.x}
       y={props.y}
-      isFullscreen={isFullscreen}
       initialHeight={initialSize.height}
       initialWidth={initialSize.width}
     >
       <div
         style={{
-          width: isFullscreen ? "600px" : initialSize.width,
-          height: isFullscreen ? "calc(100vh - 40px)" : initialSize.height,
+          width: windowWidth <=500? "150px" : initialSize.width,
+          height: windowWidth <= 500? "100px" : initialSize.height,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          fontSize: windowWidth <=500? "12px" : "18",
           border: "3px solid rgba(0, 0, 0, 0.4)",
-          backgroundImage: `url(${thankYouImage})`,
-          backgroundSize: "cover", 
-          backgroundPosition: "center", 
         }}
         onMouseDown={() => {
           setAppOnFocus(props.id);
@@ -95,13 +104,13 @@ function Application({ Node, ...props }: IApplicationProps) {
             <button
               style={{
                 display: "flex",
-                height: "24px",
-                width: "24px",
+                height: windowWidth <=500? "16px" : "24px",
+                width:  windowWidth <=500? "16px" : "24px",
                 alignItems: "center",
                 justifyContent: "center",
                 backgroundColor: "rgba(255, 255, 255, 0.8)",
                 color: "rgba(0, 0, 0, 0.8)",
-                fontSize: "24px",
+                fontSize: windowWidth <=500? "10px": "24px",
               }}
               onClick={close}
             >
@@ -112,13 +121,8 @@ function Application({ Node, ...props }: IApplicationProps) {
 
         <div
           style={{
-            display: "flex",
             height: "100%",
             width: "100%",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
             backgroundColor: "rgba(255, 255, 255, 0.8)",
             backgroundImage: `url(${thankYouImage})`,
           backgroundSize: "cover", 

@@ -1,7 +1,6 @@
 import Breadcrumbs from '@/components/breadcrumb/breadcrumb';
 import CornerDotsBox from '@/components/ui/corner-dots-box';
 import HexagonFigureIcon from '@/components/icon/hexagon-figure-icon';
-import StarIcon from '@/components/icon/star-icon';
 import { Box, T } from '@/components/stitches';
 import { type ReactNode } from 'react';
 import { styled } from 'stitches.config';
@@ -33,9 +32,9 @@ const NavigationBar = ({ children }: Props) => {
             </NavbarTitleContainer>
             <NavbarLinksContainer>
               <NavbarLinksRow>
-                <NavigationBarLink href="/" label="ANALYSIS" exactPath />
+                <NavigationBarLink href="/" label="HOME" exactPath />
                 <NavigationBarLink href="/about" label="ABOUT ME" />
-                <NavigationBarLink href="/technical" label="TECHNICAL EXPERTISE" />
+                <NavigationBarLink href="/technical" label="TECHNICAL" />
                 <NavigationBarLink href="/projects" label="PROJECTS" />
                 <NavigationBarLink href="/contact" label="CONTACT" />
                 <MusicToggleButton src="/tchaikovsky.mp3" />
@@ -125,12 +124,6 @@ const NavbarLinksContainer = styled('div', {
   },
 });
 
-const NavbarLinksRight = styled('div', {
-  position: 'absolute',
-  right: 0,
-  top: 0,
-});
-
 const NavbarLinksRow = styled('div', {
   display: 'flex',
   flexDirection: 'row',
@@ -142,23 +135,5 @@ const NavbarLinksRow = styled('div', {
   },
 });
 
-const NavbarRightButton = styled('button', {
-  cursor: 'pointer',
-  border: 0,
-  padding: '6px 24px 6px 24px',
-  fontFamily: 'inherit',
-  fontSize: '$fontSizes$4',
-  fontWeight: '700',
-  background: 'none',
-  transition: '150ms',
-  whiteSpace: 'nowrap',
-  color: '$gray12',
-  height: '30px',
-
-  '&:hover': {
-    transition: '150ms',
-    backgroundColor: 'rgba(0, 0, 0, 0.05)',
-  },
-});
 
 export default NavigationBar;
