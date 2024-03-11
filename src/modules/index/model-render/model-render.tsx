@@ -52,7 +52,7 @@ const ModelRender = () => {
             <T background="cyan1" size={5} color="gray1" padding="tiny">FPS: {fps}</T>
           </WidgetInfoTextGroup>
           <WidgetInfoTextGroup align="right">
-            <T size={5} color="gray8" padding="tiny">FRAMER-MOTION</T>
+            {/* <T size={5} color="gray8" padding="tiny">FRAMER-MOTION</T> */}
             <T size={5} color="gray8" padding="tiny">8.5.3-ALPHA.1 </T>
           </WidgetInfoTextGroup>
         </WidgetInfoTextRow>

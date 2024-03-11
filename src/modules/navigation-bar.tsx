@@ -54,12 +54,20 @@ const NavigationBar = ({ children }: Props) => {
   );
 };
 
+
+  
+
 const AppWrapper = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
+  '@media (orientation: landscape)': {
+    overflowY: 'auto', // Enables vertical scrolling
+  //  height: 'calc(100% - 1100px)',
+  height: 'calc(100vh - 50px)',
+  },
 });
-
+  
 const Wrapper = styled('div', {
   display: 'flex',
   flexDirection: 'column',

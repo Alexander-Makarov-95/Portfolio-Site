@@ -30,12 +30,6 @@ export default function Home() {
               <About />
             </AnimateComponentMount>
           </Box>
-
-          {/* <Box css={{ flex: 1, minWidth: 300, maxWidth: 600 }}>
-            <AnimateComponentMount>
-              <ProjectStack />
-            </AnimateComponentMount>
-          </Box> */}
         </ComponentsContainer>
       </Wrapper>
     </>
@@ -46,6 +40,10 @@ const Wrapper = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   // overflowY: 'scroll'
+  // '@media (orientation: landscape)': {
+  //   overflowY: 'auto', // Enables vertical scrolling
+  //   height: 'calc(100% - 950px)',
+  // },
   
   
 });
@@ -55,15 +53,11 @@ const ComponentsContainer = styled('div', {
   flexDirection: 'row',
   gap: '30px',
   flexWrap: 'wrap',
-  // overflowY: 'scroll',
-  // '@media (max-width: 428px)': {
-  //   textShadow: '0 0 4px BLACK',
-  //   // Add styles bp4 breakpoint here
-  //   // For example, changing the height
-  //   height: 'calc(100vh - 375px)',
-  //   // '@media (orientation: landscape)': {
-  //     overflowY: 'scroll', 
-  //   // },
-  // }
-
+  // Landscape orientation media query
+  '@media (orientation: landscape)': {
+    // Set min-height more than 100vh to ensure scrolling
+    // Adjust this value as needed, considering any fixed headers or footers
+    // minHeight: 'calc(100vh + 10vh)',
+    // overflowY: 'auto', // Enables vertical scrolling
+  },
 });

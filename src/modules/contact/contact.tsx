@@ -29,15 +29,16 @@ const Contact = () => {
 
 const Wrapper = styled('div', {
   '@media (max-width: 510px)': {
-    // textShadow: '0 0 4px BLACK',
-    // Add styles bp4 breakpoint here
-    // For example, changing the height
     height: 'calc(100vh - 375px)',
-    // '@media (orientation: landscape)': {
-      overflowY: 'scroll', 
-      //add padding to the right 
-      paddingRight: '20px',
-    // },
+    overflowY: 'scroll', 
+    paddingRight: '20px',
+        textShadow: `
+    1px 1px 0.1px rgba(0, 0, 0, 0.5),
+    -1px -1px 0.1px rgba(0, 0, 0, 0.5),
+    1px -1px 0.1px rgba(0, 0, 0, 0.5),
+    -1px 1px 0.1px rgba(0, 0, 0, 0.5),
+    2px 1px 0.1px rgba(0, 0, 0, 0.5)
+  `,
   }
   ,
   marginRight: '-20px',
@@ -50,6 +51,15 @@ const Background = styled('div', {
   flexDirection: 'column',
   // backdropFilter: 'blur(2.5px)',
   // border: '0.1px solid rgba(0, 255, 255, 0.025)'
+  // '@media (max-width: 510px)': {
+  //   textShadow: `
+  //   1px 1px 0.1px rgba(0, 0, 0, 0.5),
+  //   -1px -1px 0.1px rgba(0, 0, 0, 0.5),
+  //   1px -1px 0.1px rgba(0, 0, 0, 0.5),
+  //   -1px 1px 0.1px rgba(0, 0, 0, 0.5),
+  //   2px 1px 0.1px rgba(0, 0, 0, 0.5)
+  // `,
+  //   }
 });
 
 export default Contact;

@@ -20,11 +20,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <div style={{ 
       position: 'fixed',
       zIndex: -1,
-      top: 0,
-      left: 0,
-      width: '100vw',
-      height: '100vh',
-      overflow: 'hidden'
     }}>
       <Background /> 
       </div>

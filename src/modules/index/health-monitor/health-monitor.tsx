@@ -29,9 +29,9 @@ const HealthMonitor: ForwardRefRenderFunction<EChartsRef> = (_, ref) => {
             </T>
           </WidgetInfoTextGroup>
           <WidgetInfoTextGroup align="right">
-          <T size={5} color="gray8" padding="tiny">CYBERDYNE MODEL: T-1000</T>
+          {/* <T size={5} color="gray8" padding="tiny">CYBERDYNE: T-1000</T> */}
             <T size={5} color="gray8" padding="tiny">KERNEL: ГОРИЗОНТ СОБЫТИЙ ВЗОР</T>
-            <T size={5} color="gray8" padding="tiny">ALPHA 5.4.1 </T>
+            {/* <T size={5} color="gray8" padding="tiny">ALPHA 5.4.1 </T> */}
           </WidgetInfoTextGroup>
         </WidgetInfoTextRow>
       </WidgetInfoTextWrapper>
@@ -44,16 +44,17 @@ const Wrapper = styled('div', {
   position: 'relative',
   background: '$cyan14',
   height: '75vh',
-  // border: '0.1px solid rgba(0, 255, 255, 0.025)',
-  // Media query for bp4
   '@media (max-width: 510px)': {
-    textShadow: '0 0 4px BLACK',
-    // Add styles bp4 breakpoint here
-    // For example, changing the height
     height: '50vh',
-    // '@media (orientation: landscape)': {
-    //   overflowY: 'scroll', 
-    // },
+    textShadow: `
+    1px 1px 0.1px rgba(0, 0, 0, 0.5),
+    -1px -1px 0.1px rgba(0, 0, 0, 0.5),
+    1px -1px 0.1px rgba(0, 0, 0, 0.5),
+    -1px 1px 0.1px rgba(0, 0, 0, 0.5),
+    2px 1px 0.1px rgba(0, 0, 0, 0.5)
+  `,
+  
+    
   }
 });
 
