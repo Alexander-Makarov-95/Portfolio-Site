@@ -1,6 +1,5 @@
 import Chip from '@/components/chip/chip';
 import CornerDotsBox from '@/components/ui/corner-dots-box';
-import CornerLinesBox from '@/components/ui/corner-lines-box';
 import StitchesIcon from '@/components/icon/stitches-icon';
 import { Box, ColoredBox, T } from '@/components/stitches';
 import { styled } from 'stitches.config';
@@ -32,12 +31,6 @@ const ProjectStack = () => {
     
     <Wrapper>
       <ColoredBox color="cyan14" size="max" >
-        {/* <Box css={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Box>
-            <T color="cyan1" weight={2}>TOOLS </T>
-            <T color="cyan1" weight={1} >MATRIX</T>
-          </Box>
-        </Box> */}
       </ColoredBox>
       <Box css={{ height: 15 }} />
       <CornerDotsBox/>
@@ -135,3 +128,4 @@ const StackContainer = styled('div', {
 });
 
 export default ProjectStack;
+

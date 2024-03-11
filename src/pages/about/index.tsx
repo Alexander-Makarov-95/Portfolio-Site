@@ -39,11 +39,6 @@ export default function Home() {
 const Wrapper = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  // overflowY: 'scroll'
-  // '@media (orientation: landscape)': {
-  //   overflowY: 'auto', // Enables vertical scrolling
-  //   height: 'calc(100% - 950px)',
-  // },
   
   
 });
@@ -53,11 +48,4 @@ const ComponentsContainer = styled('div', {
   flexDirection: 'row',
   gap: '30px',
   flexWrap: 'wrap',
-  // Landscape orientation media query
-  '@media (orientation: landscape)': {
-    // Set min-height more than 100vh to ensure scrolling
-    // Adjust this value as needed, considering any fixed headers or footers
-    // minHeight: 'calc(100vh + 10vh)',
-    // overflowY: 'auto', // Enables vertical scrolling
-  },
 });

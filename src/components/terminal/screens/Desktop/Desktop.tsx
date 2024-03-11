@@ -39,8 +39,7 @@ const Desktop = () => {
 
   return (
     <>
-      {/* {loading && <Loading />} */}
-      <WelcomeCardContainer>
+      <WelcomeCardContainer> 
         <WelcomeCard onEnterMainframe={handleEnterMainframe} />
         {loading && (
           <LoadingWrapper>
@@ -135,15 +134,6 @@ const TopBar = styled("div", {
 });
 
 const LoadingWrapper = styled("div", {
-  // position: "absolute",
-  // height: "293px", // Ensure this matches DesktopBox height
-  // width: "500px", // Ensure this matches DesktopBox width
-  // top: "49%", // Center vertically
-  // left: "49.5%", // Center horizontally
-  // transform: "translate(-50%, -50%)", // Adjust based on the size to center properly
-  // display: "flex",
-  // justifyContent: "center",
-  // alignItems: "center"
   display: 'flex',
   height: '292px',
   width: '502px',
@@ -159,11 +149,38 @@ const LoadingWrapper = styled("div", {
   overflow: 'hidden',
   position: 'absolute',
   '@media (max-width: 600px)': { 
-    width: '84%', 
+    width: '85%', 
     height: '84%',
-    top: 15
+    top: 13,
+    left: 25
+  
   },
 
+});
+
+const LightTextShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
+
+  },
+});
+
+const DarkTextShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+      0.5px 0.5px 0.1px rgba(0, 0, 0, 0.5),
+      -0.1px -0.1px 0.1px rgba(0, 0, 0, 0.5),
+      1px -0.5px 0.1px rgba(0, 0, 0, 0.5),
+      -1px 1px 0.1px rgba(0, 0, 0, 0.5),
+      0.5px 1px 0.1px rgba(0, 0, 0, 0.5)
+    `,
+  },
 });
 
 export default Desktop;

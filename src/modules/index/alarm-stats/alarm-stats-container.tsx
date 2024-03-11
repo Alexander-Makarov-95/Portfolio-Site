@@ -32,12 +32,14 @@ const AlarmStatsContainer = () => {
   return (
     <>
       <WidgetWrapper>
+        <ShadowWrapper>
         <WidgetHeader>
           <WidgetHeader.Left>
             <T color="cyan1" weight={2}>PERSONAL </T>
             <T color="cyan1" weight={1} >PROJECTS</T>
           </WidgetHeader.Left>
         </WidgetHeader>
+        </ShadowWrapper>
 
         <Box css={{ h: 10 }} />
 
@@ -71,5 +73,20 @@ const StepProgressBarWrapper = styled('div', {
   gap: '40px',
   justifyContent: 'space-between',
 });
+
+
+const ShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
+
+  },
+});
+
 
 export default AlarmStatsContainer;

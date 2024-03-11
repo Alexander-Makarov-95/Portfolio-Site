@@ -11,6 +11,7 @@ const HealthMonitorContainer: ForwardRefRenderFunction<EChartsRef> = (_, ref) =>
   return (
     <>
       <WidgetWrapper>
+        <ShadowWrapper>
         <WidgetHeader>
           <WidgetHeader.Left>
             <T color="cyan1" weight={2}>SINGULARTIY </T>
@@ -23,6 +24,7 @@ const HealthMonitorContainer: ForwardRefRenderFunction<EChartsRef> = (_, ref) =>
             </TitleTextRow>
           </WidgetHeader.Right>
         </WidgetHeader>
+        </ShadowWrapper>
 
         <Box css={{ h: 10 }} />
 
@@ -43,6 +45,19 @@ const TitleTextRow = styled('div', {
   gap: '6px',
   alignItems: 'center',
 });
+
+const ShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+      0.5px 0.5px 0.1px rgba(0, 0, 0, 0.5),
+      -0.1px -0.1px 0.1px rgba(0, 0, 0, 0.5),
+      1px -0.5px 0.1px rgba(0, 0, 0, 0.5),
+      -1px 1px 0.1px rgba(0, 0, 0, 0.5),
+      0.5px 1px 0.1px rgba(0, 0, 0, 0.5)
+    `,
+  },
+});
+
 
 export default forwardRef(HealthMonitorContainer);
 

@@ -70,3 +70,5 @@ const Background = styled('div', {
 });
 
 export default About;
+
+

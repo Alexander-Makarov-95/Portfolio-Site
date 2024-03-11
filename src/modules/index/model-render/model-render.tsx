@@ -34,26 +34,28 @@ const ModelRender = () => {
   return (
     <Wrapper>
       <WidgetInfoTextWrapper>
+      <ShadowWrapper>
         <WidgetInfoTextRow>
           <WidgetInfoTextGroup>
-            <T size={5} color="gray8" padding="tiny">ALIAS: MAKAROV</T>
-            <T size={5} color="gray8" padding="tiny">DOB: 04/12/1995 </T>
-            <T size={5} color="gray8" padding="tiny">STATUS: JOB-HUNTING </T>
-            <T size={5} color="gray8" padding="tiny">LOCATION: SYDNEY, AUSTRALIA </T>
-            <T size={5} color="gray8" padding="tiny">UNIT GROUP: BLACKBOOK.AI </T>
+            <T size={5} color="gray11" padding="tiny">ALIAS: MAKAROV</T>
+            <T size={5} color="gray11" padding="tiny">STATUS: JOB-HUNTING </T>
+            <T size={5} color="gray11" padding="tiny">LOCATION: SYDNEY </T>
+            <T size={5} color="gray11" padding="tiny">COUNTRY: AUS </T>
           </WidgetInfoTextGroup>
           <WidgetInfoTextGroup align="right">
-            <T size={5} color="gray8" padding="tiny">{date?.toISOString()}</T>
-            <T size={5} color="gray8" padding="tiny">[UP TO DATE]</T>
+            <T size={5} color="gray11" padding="tiny">{date?.toISOString()}</T>
+            <T size={5} color="gray11" padding="tiny">[UP TO DATE]</T>
           </WidgetInfoTextGroup>
         </WidgetInfoTextRow>
+        </ShadowWrapper>
         <WidgetInfoTextRow align="bottom">
           <WidgetInfoTextGroup>
             <T background="cyan1" size={5} color="gray1" padding="tiny">FPS: {fps}</T>
           </WidgetInfoTextGroup>
           <WidgetInfoTextGroup align="right">
-            {/* <T size={5} color="gray8" padding="tiny">FRAMER-MOTION</T> */}
-            <T size={5} color="gray8" padding="tiny">8.5.3-ALPHA.1 </T>
+          <ShadowWrapper>
+            <T size={5} color="gray11" padding="tiny">8.5.3-ALPHA.1 </T>
+            </ShadowWrapper>
           </WidgetInfoTextGroup>
         </WidgetInfoTextRow>
       </WidgetInfoTextWrapper>
@@ -121,9 +123,20 @@ const Wrapper = styled('div', {
   alignItems: 'center',
   position: 'relative',
   background: '$cyan14',
-  // backdropFilter: 'blur(2.5px)',
-  // border: '0.1px solid rgba(0, 255, 255, 0.025)'
 });
+
+const ShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+      0.5px 0.5px 0.1px rgba(0, 0, 0, 0.5),
+      -0.1px -0.1px 0.1px rgba(0, 0, 0, 0.5),
+      1px -0.5px 0.1px rgba(0, 0, 0, 0.5),
+      -1px 1px 0.1px rgba(0, 0, 0, 0.5),
+      0.5px 1px 0.1px rgba(0, 0, 0, 0.5)
+    `,
+  },
+});
+
 
 const ImageWrapper = styled('div', {
   display: 'flex',
@@ -150,7 +163,12 @@ const DottedCircle = styled(motion.div, {
         border: '3px dotted $cyan9',
       },
     }
-  }
+  },
+  '@media (max-width: 510px)': {
+    display: 'none'
+
+  
+  },
 });
 
 export default ModelRender;

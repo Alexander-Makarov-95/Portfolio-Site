@@ -18,22 +18,20 @@ const ProjectView = ({ alarm }: Props) => {
         <MainDetailsWrapper>
           <AlarmInfoWrapper>
             <CornerLinesBox topLeft lineLength="10px" />
+            <LightTextShadowWrapper>
             <AlarmHeaderWrapper>
               <IconContainer>
                 <WarningIcon color='green1' width={22} height={22} />
               </IconContainer>
               <AlarmTitleWrapper>
               <T2 color="gray12" size={{ '@initial': '6', '@bp570': '4' }} weight="4" >{alarm.label}</T2>
-
                 <Box css={{ h: 10 }} />
-
                 <T2 color="yellow1" size="4" weight="4" >ID: {alarm.id}</T2>
- 
               </AlarmTitleWrapper>
             </AlarmHeaderWrapper>
-
+            </LightTextShadowWrapper>
+            <DarkTextShadowWrapper>
             <Box css={{ h: 12 }} />
-
             <Box>
               <T size="5" color="gray9">
                 VIEW DATE DUE:{' '}
@@ -41,27 +39,21 @@ const ProjectView = ({ alarm }: Props) => {
               </T>
               <Box css={{ h: 10 }} />
             </Box>
-
+            </DarkTextShadowWrapper>
           </AlarmInfoWrapper>
-
           <AlarmViewCodeGridWrapper>
             <ProjectViewGrid data={alarm.unitCodeData} />
           </AlarmViewCodeGridWrapper>
         </MainDetailsWrapper>
-
-
-        {/* <Box css={{ h: 400 }} > */}
           <OperatingSystem/>
-          {/* </Box> */}
-
+          <LightTextShadowWrapper>
         <Box>
           <DescriptionWrapper title={alarm.description}>
             <T size="5" color="gray9">PROTOCOL DESC: {' '}</T>
             <T size="5" color="gray10" >{alarm.description}</T>
           </DescriptionWrapper>
-          
         </Box>
-
+        </LightTextShadowWrapper>
       </ContentWrapper>
     </Wrapper>
     
@@ -130,5 +122,33 @@ const AlarmViewCodeGridWrapper = styled('div', {
   justifyContent: 'center',
   alignItems: 'center'
 });
+
+const LightTextShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
+
+  },
+});
+
+const DarkTextShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+      0.5px 0.5px 0.1px rgba(0, 0, 0, 0.5),
+      -0.1px -0.1px 0.1px rgba(0, 0, 0, 0.5),
+      1px -0.5px 0.1px rgba(0, 0, 0, 0.5),
+      -1px 1px 0.1px rgba(0, 0, 0, 0.5),
+      0.5px 1px 0.1px rgba(0, 0, 0, 0.5)
+    `,
+  },
+});
+
+
+
 
 export default ProjectView;

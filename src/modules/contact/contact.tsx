@@ -32,7 +32,7 @@ const Wrapper = styled('div', {
     height: 'calc(100vh - 375px)',
     overflowY: 'scroll', 
     paddingRight: '20px',
-        textShadow: `
+    textShadow: `
     1px 1px 0.1px rgba(0, 0, 0, 0.5),
     -1px -1px 0.1px rgba(0, 0, 0, 0.5),
     1px -1px 0.1px rgba(0, 0, 0, 0.5),
@@ -49,17 +49,6 @@ const Background = styled('div', {
   padding: '12px',
   display: 'flex',
   flexDirection: 'column',
-  // backdropFilter: 'blur(2.5px)',
-  // border: '0.1px solid rgba(0, 255, 255, 0.025)'
-  // '@media (max-width: 510px)': {
-  //   textShadow: `
-  //   1px 1px 0.1px rgba(0, 0, 0, 0.5),
-  //   -1px -1px 0.1px rgba(0, 0, 0, 0.5),
-  //   1px -1px 0.1px rgba(0, 0, 0, 0.5),
-  //   -1px 1px 0.1px rgba(0, 0, 0, 0.5),
-  //   2px 1px 0.1px rgba(0, 0, 0, 0.5)
-  // `,
-  //   }
 });
 
 export default Contact;

@@ -10,6 +10,7 @@ const RuntimeMetricsContainer = () => {
   return (
     <>
       <WidgetWrapper>
+        <ShadowWrapper>
         <WidgetHeader>
           <WidgetHeader.Left>
             <T color="cyan1" weight={2}>EXPERTISE </T>
@@ -23,6 +24,7 @@ const RuntimeMetricsContainer = () => {
          <TableDataRow>
           <ProjectStack />
         </TableDataRow> 
+        </ShadowWrapper>
       </WidgetWrapper>
     </>
   );
@@ -39,6 +41,20 @@ const TableDataRow = styled('div', {
     flex: 1,
     // minWidth: '200px'
   }
+});
+
+
+const ShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
+
+  },
 });
 
 export default RuntimeMetricsContainer;

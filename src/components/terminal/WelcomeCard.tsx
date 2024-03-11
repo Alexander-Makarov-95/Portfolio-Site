@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 import styles from "../terminal/styles/tailwind.module.css";
+import { styled } from "@stitches/react";
 
 function WelcomeCard({ onEnterMainframe }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -27,7 +28,8 @@ function WelcomeCard({ onEnterMainframe }) {
       }}
     >
       {isOpen && (
-        <div className="flex h-full w-full flex-col items-center justify-center text-center px-2 sm:pl-4">
+        
+        <LightTextShadowWrapper className="flex h-full w-full flex-col items-center justify-center text-center px-2 sm:pl-4">
         {/* Base styles for mobile and overridden styles for larger screens */}
         <h1 className="text-[4vw] md:text-xl lg:text-2xl leading-tight md:leading-normal">//SingularityOS//</h1>
         <p className="text-[3vw] my-1 md:text-base lg:text-lg md:my-2 leading-tight md:leading-normal max-w-xs sm:max-w-none">
@@ -39,10 +41,23 @@ function WelcomeCard({ onEnterMainframe }) {
         <button className={clsx(styles.button, "text-sm sm:text-base md:text-lg")} onClick={handleClose}>
             Enter mainframe
         </button>
-      </div>
+      </LightTextShadowWrapper>
       )}
     </div>
   );
 }
+
+const LightTextShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
+
+  },
+});
 
 export default WelcomeCard;

@@ -42,7 +42,16 @@ const Wrapper = styled('button', {
   whiteSpace: 'nowrap',
   padding: '0px 5px 0px 5px',
   height: '20px',
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
 
+  },
 });
 
 const IconWrapper = styled('div', {

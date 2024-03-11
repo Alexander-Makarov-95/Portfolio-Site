@@ -11,12 +11,14 @@ const HealthMonitor: ForwardRefRenderFunction<EChartsRef> = (_, ref) => {
   return (
     <Wrapper>
       <WidgetInfoTextWrapper>
+        <ShadowWrapper>
         <WidgetInfoTextRow>
           <WidgetInfoTextGroup >
             <T size={5} padding="tiny">ID: EVENT HORIZON PATHFINDER </T>
             <T size={5} padding="tiny">DATA SET: ECHO VAULT DOSSIER </T>
           </WidgetInfoTextGroup>
         </WidgetInfoTextRow>
+        </ShadowWrapper>
         <WidgetInfoTextRow align="bottom">
           <WidgetInfoTextGroup>
             <T
@@ -28,11 +30,13 @@ const HealthMonitor: ForwardRefRenderFunction<EChartsRef> = (_, ref) => {
               CURRENT STREAM: {chartData?.slice(-1)[0].value.join(': ')}
             </T>
           </WidgetInfoTextGroup>
+          <ShadowWrapper>
           <WidgetInfoTextGroup align="right">
           {/* <T size={5} color="gray8" padding="tiny">CYBERDYNE: T-1000</T> */}
-            <T size={5} color="gray8" padding="tiny">KERNEL: ГОРИЗОНТ СОБЫТИЙ ВЗОР</T>
+            <T size={5} color="gray8" padding="tiny">KERNEL: ADVANCED PROTOTYPE T-1000</T>
             {/* <T size={5} color="gray8" padding="tiny">ALPHA 5.4.1 </T> */}
           </WidgetInfoTextGroup>
+          </ShadowWrapper>
         </WidgetInfoTextRow>
       </WidgetInfoTextWrapper>
     </Wrapper>
@@ -40,19 +44,25 @@ const HealthMonitor: ForwardRefRenderFunction<EChartsRef> = (_, ref) => {
 };
 
 
+const ShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
+
+  },
+});
+
 const Wrapper = styled('div', {
   position: 'relative',
   background: '$cyan14',
   height: '75vh',
   '@media (max-width: 510px)': {
     height: '50vh',
-    textShadow: `
-    1px 1px 0.1px rgba(0, 0, 0, 0.5),
-    -1px -1px 0.1px rgba(0, 0, 0, 0.5),
-    1px -1px 0.1px rgba(0, 0, 0, 0.5),
-    -1px 1px 0.1px rgba(0, 0, 0, 0.5),
-    2px 1px 0.1px rgba(0, 0, 0, 0.5)
-  `,
   
     
   }
