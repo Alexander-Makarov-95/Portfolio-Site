@@ -114,12 +114,12 @@ const Input = styled('input', {
   padding: '0.5rem',
   borderRadius: '4px',
   border: '1px solid #ccc',
-  backgroundColor: '$cyan8',
-  
-  '::placeholder': {
-    color: 'red',
-    fontFamily: 'inherit'
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 0.5px 0.5px rgba(0, 0, 0, 1)
+  `,
   },
+  backgroundColor: '$cyan8',
 });
 
 const CustomReCAPTCHA = styled(ReCAPTCHA, {
@@ -131,6 +131,10 @@ const TextArea = styled('textarea', {
   borderRadius: '4px',
   border: '1px solid #ccc',
   minHeight: '100px',
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 0.5px 0.5px rgba(0, 0, 0, 1)
+  `},
   backgroundColor: '$cyan8',
   resize: 'none'
 });
@@ -142,8 +146,20 @@ const Button = styled('button', {
   backgroundColor: '$cyan8',
   color: 'white',
   cursor: 'pointer',
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
+
+  },
   '&:hover': {
     background: '$cyan4',
+    
+    
   },
 });
 
@@ -158,7 +174,21 @@ const SuccessMessage = styled('div', {
   backgroundColor: '$cyan8',
   color: 'rgba(255,255,255,1)',
   borderRadius: '0.25rem',
-  border: '1px solid #C3E6CB'
+  border: '1px solid #ccc',
 });
+
+const LightTextShadowWrapper = styled('div', {
+  '@media (max-width: 510px)': {
+    textShadow: `
+    1px 1px 1px rgba(0, 0, 0, 0.5),
+    -1px -1px 1px rgba(0, 0, 0, 0.5),
+    1px -1px 1px rgba(0, 0, 0, 0.5),
+    -1px 1px 1px rgba(0, 0, 0, 0.5),
+    2px 1px 1px rgba(0, 0, 0, 0.5)
+  `,
+
+  },
+});
+
 
 export default ContactForm;
