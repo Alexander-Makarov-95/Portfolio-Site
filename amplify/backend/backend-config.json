@@ -1,0 +1,43 @@
+{
+  "api": {
+    "BlackHoleContactForm": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "BlackHoleEmailerHandler"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "BlackHoleEmailerHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_BlackHoleEmailerHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "BlackHoleEmailerHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_BlackHoleEmailerHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "BlackHoleEmailerHandler"
+        }
+      ]
+    }
+  }
+}
