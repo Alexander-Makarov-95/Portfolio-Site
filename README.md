@@ -4,7 +4,7 @@
 :star: Star me on GitHub — it helps!
 
 [![Website shields.io](https://img.shields.io/badge/website-up-yellow)](https://alexander-makarov-dev.com)
-[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/alexander-makarov-52b5a215a/)
+[![Ask Me Anything !](https://img.shields.io/badge/ask%20me-linkedin-1abc9c.svg)](https://www.linkedin.com/in/alexander-makarov-dev/)
 
 ### Website Preview
 #### Home Page

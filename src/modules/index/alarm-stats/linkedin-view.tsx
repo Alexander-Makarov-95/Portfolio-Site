@@ -15,7 +15,7 @@ const LinkedInView = ({ alarm }: Props) => {
 
    // Function to handle button click
    const handleButtonClick = () => {
-      window.open('https://www.linkedin.com/in/alexander-makarov-52b5a215a/');
+      window.open('https://www.linkedin.com/in/alexander-makarov-dev/');
   };
 
   return (
