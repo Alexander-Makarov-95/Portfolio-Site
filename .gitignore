@@ -40,3 +40,4 @@ notes.txt
 
 #Amplify
 src/awsconfiguration.json
+src/aws-exports.js
