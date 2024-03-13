@@ -39,5 +39,10 @@ next-env.d.ts
 notes.txt
 
 #Amplify
-src/awsconfiguration.json
+amplify/\#current-cloud-backend
+amplify/.config/local-*
+amplify/backend/amplify-meta.json
+amplify/backend/awscloudformation
+
 src/aws-exports.js
+src/awsconfiguration.json
