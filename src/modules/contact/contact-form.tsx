@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState, useRef } from 'react';
 import { styled } from 'stitches.config';
 import { Amplify, API } from 'aws-amplify';
