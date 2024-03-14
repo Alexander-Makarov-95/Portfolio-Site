@@ -27,7 +27,7 @@
 #### Contact Page
 <img src="https://github.com/Alexander-Makarov-95/Portfolio_Site/assets/68580705/12544e3c-c43a-49d1-a339-94de37681b44" width="900">
 
-:star: Star me on GitHub — it helps!
+:star: Star me on GitHub — it helps! 
 
 ## Features 📋
 ⚡️ Futuristic sci-fi inspired UI \
