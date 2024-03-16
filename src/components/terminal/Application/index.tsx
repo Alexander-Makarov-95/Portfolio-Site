@@ -48,8 +48,6 @@ function Application({ Node, width, height, ...props }: IApplicationProps & { wi
     }, 500);
   }, []);
 
-console.log(windowHeight, windowWidth)
-
   return (
     <Draggable
       drag={drag}
