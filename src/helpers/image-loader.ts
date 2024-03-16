@@ -9,14 +9,3 @@ export const imageLoader: ImageLoader = ({ src, width, quality }) => {
 
   return withoutProps;
 };
-
-
-// export const imageLoader = ({ src, width, quality }) => {
-//   // Assuming images are stored in the public/images directory
-//   // const localPath = `/images${src}`;
-//   // const localPath = `/public${src} `;
-//   const localPath = '/public/';
-
-
-//   return localPath;
-// };

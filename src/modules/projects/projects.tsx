@@ -50,7 +50,6 @@ const Background = styled("div", {
   flexDirection: "column",
   // backdropFilter: 'blur(2.5px)',
   // border: "0.1px solid rgba(0, 255, 255, 0.025)",
-  '@media (max-width: 510px)': {
     textShadow: `
     1px 1px 0.1px rgba(0, 0, 0, 0.5),
     -1px -1px 0.1px rgba(0, 0, 0, 0.5),
@@ -58,7 +57,6 @@ const Background = styled("div", {
     -1px 1px 0.1px rgba(0, 0, 0, 0.5),
     2px 1px 0.1px rgba(0, 0, 0, 0.5)
   `,
-    }
 });
 
 export default Projects;

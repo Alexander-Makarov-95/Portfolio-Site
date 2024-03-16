@@ -126,7 +126,7 @@ const Wrapper = styled('div', {
 });
 
 const ShadowWrapper = styled('div', {
-  '@media (max-width: 510px)': {
+
     textShadow: `
       0.5px 0.5px 0.1px rgba(0, 0, 0, 0.5),
       -0.1px -0.1px 0.1px rgba(0, 0, 0, 0.5),
@@ -134,7 +134,6 @@ const ShadowWrapper = styled('div', {
       -1px 1px 0.1px rgba(0, 0, 0, 0.5),
       0.5px 1px 0.1px rgba(0, 0, 0, 0.5)
     `,
-  },
 });
 
 

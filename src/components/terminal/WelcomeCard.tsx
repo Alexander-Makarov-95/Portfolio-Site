@@ -19,8 +19,11 @@ function WelcomeCard({ onEnterMainframe }) {
     <div
       className={clsx(
         "absolute p-1",
-        "w-full sm:w-96 md:w-[600px]", // Adjusts width based on screen size
-        "h-[288px] md:h-[400px]", // Adjusts height based on screen size
+        "w-full",
+        // Conditional classes for up to 600px screen width
+        {"h-[400px]": "max-width: 600px"},
+        // Conditional classes for screen width between 601px and 768px
+        {"h-[400px] ": "min-width: 601px and max-width: 768px"},
         "bg-no-repeat bg-center bg-contain"
       )}
       style={{
@@ -28,27 +31,24 @@ function WelcomeCard({ onEnterMainframe }) {
       }}
     >
       {isOpen && (
-        
         <LightTextShadowWrapper className="flex h-full w-full flex-col items-center justify-center text-center px-2 sm:pl-4">
-        {/* Base styles for mobile and overridden styles for larger screens */}
-        <h1 className="text-[4vw] md:text-xl lg:text-2xl leading-tight md:leading-normal">//SingularityOS//</h1>
-        <p className="text-[3vw] my-1 md:text-base lg:text-lg md:my-2 leading-tight md:leading-normal max-w-xs sm:max-w-none">
-          Welcome to the Pathfinder's onboard operating system.
-        </p>
-        <p className="text-[3vw] my-1 md:text-base lg:text-lg md:my-2 leading-tight md:leading-normal">
-          Click through the icons to view my projects.
-        </p>
-        <button className={clsx(styles.button, "text-sm sm:text-base md:text-lg")} onClick={handleClose}>
-            Enter mainframe
-        </button>
-      </LightTextShadowWrapper>
+          <h1 className="text-[4vw] md:text-xl lg:text-2xl leading-tight md:leading-normal">//SingularityOS//</h1>
+          <p className="text-[3vw] my-1 md:text-base lg:text-lg md:my-2 leading-tight md:leading-normal max-w-xs sm:max-w-none">
+            Welcome to the Pathfinder's onboard operating system.
+          </p>
+          <p className="text-[3vw] my-1 md:text-base lg:text-lg md:my-2 leading-tight md:leading-normal">
+            Click through the icons to view my projects.
+          </p>
+          <button className={clsx(styles.button, "text-sm sm:text-base md:text-lg")} onClick={handleClose}>
+              Enter mainframe
+          </button>
+        </LightTextShadowWrapper>
       )}
     </div>
   );
 }
 
 const LightTextShadowWrapper = styled('div', {
-  '@media (max-width: 510px)': {
     textShadow: `
     1px 1px 1px rgba(0, 0, 0, 0.5),
     -1px -1px 1px rgba(0, 0, 0, 0.5),
@@ -56,8 +56,6 @@ const LightTextShadowWrapper = styled('div', {
     -1px 1px 1px rgba(0, 0, 0, 0.5),
     2px 1px 1px rgba(0, 0, 0, 0.5)
   `,
-
-  },
 });
 
 export default WelcomeCard;

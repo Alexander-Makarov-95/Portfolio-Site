@@ -116,11 +116,9 @@ const Input = styled('input', {
   padding: '0.5rem',
   borderRadius: '4px',
   border: '1px solid #ccc',
-  '@media (max-width: 510px)': {
     textShadow: `
     1px 0.5px 0.5px rgba(0, 0, 0, 1)
   `,
-  },
   backgroundColor: '$cyan8',
 });
 
@@ -133,10 +131,9 @@ const TextArea = styled('textarea', {
   borderRadius: '4px',
   border: '1px solid #ccc',
   minHeight: '100px',
-  '@media (max-width: 510px)': {
     textShadow: `
     1px 0.5px 0.5px rgba(0, 0, 0, 1)
-  `},
+  `,
   backgroundColor: '$cyan8',
   resize: 'none'
 });
@@ -148,7 +145,6 @@ const Button = styled('button', {
   backgroundColor: '$cyan8',
   color: 'white',
   cursor: 'pointer',
-  '@media (max-width: 510px)': {
     textShadow: `
     1px 1px 1px rgba(0, 0, 0, 0.5),
     -1px -1px 1px rgba(0, 0, 0, 0.5),
@@ -156,8 +152,6 @@ const Button = styled('button', {
     -1px 1px 1px rgba(0, 0, 0, 0.5),
     2px 1px 1px rgba(0, 0, 0, 0.5)
   `,
-
-  },
   '&:hover': {
     background: '$cyan4',
     
@@ -180,7 +174,6 @@ const SuccessMessage = styled('div', {
 });
 
 const LightTextShadowWrapper = styled('div', {
-  '@media (max-width: 510px)': {
     textShadow: `
     1px 1px 1px rgba(0, 0, 0, 0.5),
     -1px -1px 1px rgba(0, 0, 0, 0.5),
@@ -188,8 +181,6 @@ const LightTextShadowWrapper = styled('div', {
     -1px 1px 1px rgba(0, 0, 0, 0.5),
     2px 1px 1px rgba(0, 0, 0, 0.5)
   `,
-
-  },
 });
 
 

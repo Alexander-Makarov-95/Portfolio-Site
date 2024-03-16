@@ -44,7 +44,7 @@ const Background = styled('div', {
   padding: '12px',
   display: 'flex',
   flexDirection: 'column',
-  '@media (max-width: 510px)': {
+
   textShadow: `
   1px 1px 0.1px rgba(0, 0, 0, 0.5),
   -1px -1px 0.1px rgba(0, 0, 0, 0.5),
@@ -52,7 +52,6 @@ const Background = styled('div', {
   -1px 1px 0.1px rgba(0, 0, 0, 0.5),
   2px 1px 0.1px rgba(0, 0, 0, 0.5)
 `,
-  }
 });
 
 export default Technical;

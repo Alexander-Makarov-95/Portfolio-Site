@@ -124,7 +124,6 @@ const AlarmViewCodeGridWrapper = styled('div', {
 });
 
 const LightTextShadowWrapper = styled('div', {
-  '@media (max-width: 510px)': {
     textShadow: `
     1px 1px 1px rgba(0, 0, 0, 0.5),
     -1px -1px 1px rgba(0, 0, 0, 0.5),
@@ -132,12 +131,9 @@ const LightTextShadowWrapper = styled('div', {
     -1px 1px 1px rgba(0, 0, 0, 0.5),
     2px 1px 1px rgba(0, 0, 0, 0.5)
   `,
-
-  },
 });
 
 const DarkTextShadowWrapper = styled('div', {
-  '@media (max-width: 510px)': {
     textShadow: `
       0.5px 0.5px 0.1px rgba(0, 0, 0, 0.5),
       -0.1px -0.1px 0.1px rgba(0, 0, 0, 0.5),
@@ -145,7 +141,6 @@ const DarkTextShadowWrapper = styled('div', {
       -1px 1px 0.1px rgba(0, 0, 0, 0.5),
       0.5px 1px 0.1px rgba(0, 0, 0, 0.5)
     `,
-  },
 });
 
 

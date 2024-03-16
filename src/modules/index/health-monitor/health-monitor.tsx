@@ -45,7 +45,6 @@ const HealthMonitor: ForwardRefRenderFunction<EChartsRef> = (_, ref) => {
 
 
 const ShadowWrapper = styled('div', {
-  '@media (max-width: 510px)': {
     textShadow: `
     1px 1px 1px rgba(0, 0, 0, 0.5),
     -1px -1px 1px rgba(0, 0, 0, 0.5),
@@ -53,8 +52,6 @@ const ShadowWrapper = styled('div', {
     -1px 1px 1px rgba(0, 0, 0, 0.5),
     2px 1px 1px rgba(0, 0, 0, 0.5)
   `,
-
-  },
 });
 
 const Wrapper = styled('div', {
