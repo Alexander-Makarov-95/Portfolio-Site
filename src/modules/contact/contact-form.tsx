@@ -112,13 +112,15 @@ const Form = styled('form', {
   margin: 'auto',
 });
 
+
 const Input = styled('input', {
   padding: '0.5rem',
   borderRadius: '4px',
   border: '1px solid #ccc',
+  '@media (max-width: 768x)': {
     textShadow: `
     1px 0.5px 0.5px rgba(0, 0, 0, 1)
-  `,
+  `},
   backgroundColor: '$cyan8',
 });
 
@@ -131,9 +133,10 @@ const TextArea = styled('textarea', {
   borderRadius: '4px',
   border: '1px solid #ccc',
   minHeight: '100px',
+  '@media (max-width: 768x)': {
     textShadow: `
     1px 0.5px 0.5px rgba(0, 0, 0, 1)
-  `,
+  `},
   backgroundColor: '$cyan8',
   resize: 'none'
 });
