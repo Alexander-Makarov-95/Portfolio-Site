@@ -10,7 +10,7 @@ export default function SteamSync() {
       height: 175,
     });
     // Open the link when the component mounts
-    window.open("https://github.com/Alexander-Makarov-95/Portfolio_Site", "_blank");
+    window.open("https://github.com/Alexander-Makarov-95/Portfolio-Site", "_blank");
   }, []);
 
   return (
