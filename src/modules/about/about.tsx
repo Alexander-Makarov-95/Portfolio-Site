@@ -18,7 +18,7 @@ const About = () => {
           <T color="gray12" size="6">
           I am Alexander, based in Sydney, Australia. As a software developer, I actively explore various areas of technology, mainly focusing on <b>React</b>, <b>Javascript</b>, and <b> Three.js</b>.
           My professional background includes approximately three years in the <b> Robotics Process Automation </b> (RPA) sector, serving as an automation engineer consultant.  <b> </b>
-          During this time, I have contributed to organizations like Woolworths, Super Retail Group, and Vocus, developing and sustaining efficient business automation solutions.
+          During this time, I have contributed to numerous organisations, developing and sustaining efficient business automation solutions.
             <br />
             <br />
             What you are looking at right now is my personal website - a homage to my love of the mysterious wonders of the cosmos.
@@ -27,9 +27,9 @@ const About = () => {
             <br />
             In the futuristic control room of the Pathfinder, as you remotely observe the singularity, you have the unique opportunity to engage the onboard ambient sound system. 
             This advanced feature offers an immersive listening experience - <b> Tchaikovsky's 'Waltz of the Flowers' </b>, a classical masterpiece, masterfully reinterpreted through our state-of-the-art audio technology for a deeply moving cosmic experience.
+            {/* <br />
             <br />
-            <br />
-            I'm available for opportunities in all realms of software development. Please get in touch with me through the contact page.
+            I'm available for opportunities in all realms of software development. Please get in touch with me through the contact page. */}
           </T>
         </Background>
       <CornerDotsBox />

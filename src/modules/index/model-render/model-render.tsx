@@ -38,7 +38,7 @@ const ModelRender = () => {
         <WidgetInfoTextRow>
           <WidgetInfoTextGroup>
             <T size={5} color="gray11" padding="tiny">ALIAS: MAKAROV</T>
-            <T size={5} color="gray11" padding="tiny">STATUS: JOB-HUNTING </T>
+            <T size={5} color="gray11" padding="tiny">STATUS: [REDACTED]</T>
             <T size={5} color="gray11" padding="tiny">LOCATION: SYDNEY </T>
             <T size={5} color="gray11" padding="tiny">COUNTRY: AUS </T>
           </WidgetInfoTextGroup>
