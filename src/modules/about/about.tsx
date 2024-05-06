@@ -27,9 +27,9 @@ const About = () => {
             <br />
             In the futuristic control room of the Pathfinder, as you remotely observe the singularity, you have the unique opportunity to engage the onboard ambient sound system. 
             This advanced feature offers an immersive listening experience - <b> Tchaikovsky's 'Waltz of the Flowers' </b>, a classical masterpiece, masterfully reinterpreted through our state-of-the-art audio technology for a deeply moving cosmic experience.
-            {/* <br />
             <br />
-            I'm available for opportunities in all realms of software development. Please get in touch with me through the contact page. */}
+            <br />
+            I'm available for opportunities in all realms of software development. Please get in touch with me through the contact page.
           </T>
         </Background>
       <CornerDotsBox />
